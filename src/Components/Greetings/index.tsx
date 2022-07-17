@@ -4,7 +4,7 @@ import kaio from '../../../public/kaio.jpeg';
 export function Greetings() {
   return (
     <div className="mt-40">
-      <div className="flex flex-row items-center mx-auto max-w-4xl justify-between">
+      <div className="flex flex-col sm:px-5 sm:flex-row items-center mx-auto max-w-4xl justify-between">
         <div className="max-w-md">
           <div className="flex flex-row items-center">
             <h1 className="text-black text-3xl font-monoton">
@@ -38,7 +38,7 @@ export function Greetings() {
             </div>
           </div>
         </div>
-        <div>
+        <div className='mt-8 sm:mt-0'>
           <Image 
             className="animate-wave rounded-full" 
             width={320} 
