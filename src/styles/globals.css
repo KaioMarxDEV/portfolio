@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 box-border p-0 antialiased;
+  }
+
+  html {
+    @apply scroll-smooth
+  }
+
+  div {
+    @apply block;
+  }
+
+  body {
+    @apply w-full bg-image bg-cover font-inter leading-6 tracking-normal;
+  }
+
+  p {
+    @apply text-justify
+  }
+}
