@@ -1,57 +1,46 @@
-import axios from 'axios';
-import { FormEvent, useState } from "react";
+import { useState } from 'react';
+import { ModalForm } from '../ModalForm';
+
 export function Contact() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [modalStatus, setModalStatus] = useState(false);
 
-
-  async function handleSubmit(e: FormEvent) {    
-    e.preventDefault()
+  function handleModalOpen() {
+    setModalStatus(true)
+  }
   
-    const newEmail = {
-      user_id: 'dFSLX9Xitm8MW0XN5',
-      template_id: 'contact_form',
-      service_id: 'service_2ln1lsa',
-      contact_number: Math.random() * 100000 | 0,
-      user_name:name,
-      user_email:email,
-      message
-    }
-
-
-    try {
-      await axios({
-        method: "post",
-        url: "https://api.emailjs.com/api/v1.0/email/send-form",
-        data: newEmail,
-        headers: {
-          'content-type': 'multipart/form-data'
-        },
-      }).then(() => alert('Your email is sent!'))
-    } catch (e) {
-      console.log(`Tivemos um Erro ${e}`)
-    }
+  function handleModalClose() {
+    setModalStatus(false)
   }
 
   return (
-    <div className="my-24 max-w-full backdrop-blur-md drop-shadow-md rounded-lg flex flex-col items-center justify-center py-28">
-      <div className="max-w-[40rem] flex flex-col items-center">
-        <strong className="text-4xl text-center leading-6 block">
-          Interested{' '} 
-          <span className='text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-500'>
-            working
-          </span>{' '}
-          with me?
-        </strong>
-        <span className="mt-4 text-xl text-center block">
-          On the lookout for a fast learner developer that shows passion in their work? 
-           {"I'd"} love to hear from you!
-        </span>
-        <button onClick={() => {}} className="mt-8 w-1/2 px-8 py-3 cursor-pointer rounded-3xl font-semibold text-center text-my-blue border border-my-blue hover:bg-my-blue hover:text-white transition">
-          Email Me
-        </button>
+    <>
+      <div className="pt-12 border border-white flex flex-col items-center backdrop-blur-md rounded-lg">
+        <div className="w-full px-4 sm:px-6 sm:max-w-[40rem]">
+          <div className='flex flex-col items-center'>
+            <strong className="text-2xl text-center leading-6 block">
+              Interested{' '} 
+              <span className='text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-500'>
+                working
+              </span>{' '}
+              with me?
+            </strong>
+            <span className="mt-4 text-xl text-center block">
+              On the lookout for a fast learner developer that shows passion in their work?{' '} 
+              {"I'd"} love to hear from you!
+            </span>
+              <button  onClick={handleModalOpen} className=" shadow-lg shadow-gray-600 active:shadow-none active:translate-y-2 transition mt-8 w-1/2 px-8 py-3 cursor-pointer rounded-full font-semibold text-center border-4 border-my-blue bg-my-blue active:bg-my-blue/75 active:text-gray-200 text-gray-100">
+                Email Me
+              </button>
+          </div>
+        </div>
+        <footer className='mt-20 flex items-center flex-col'>
+          <span className='sm:text-sm'>
+            Built using Next.js, React and Coffee ☕😜
+          </span>
+          <span className='sm:text-sm'>kaiomarxdev.com © 2022</span>
+        </footer>
       </div>
-    </div>
+      <ModalForm modalStatus={modalStatus} handleModalClose={handleModalClose} />
+    </>
   )
 }

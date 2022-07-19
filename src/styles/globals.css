@@ -16,7 +16,7 @@
   }
 
   body {
-    @apply w-full bg-image bg-cover font-inter leading-6 tracking-normal;
+    @apply w-full font-inter leading-6 tracking-normal;
   }
 
   p {

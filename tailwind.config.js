@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
 
-
 module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   mode: "jit",
-  plugins: [],
+  plugins: [
+  ],
   theme: {
     colors: {
       'my-gold': '#FFB400',
@@ -64,9 +64,6 @@ module.exports = {
       animation: {
         wave: 'wave 1.5s infinite',
       },
-      backgroundImage: {
-        image: "url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=90')",
-      }
     }
   },
 };

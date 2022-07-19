@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import kaio from '../../../public/kaio.jpeg';
 
 export function Greetings() {
+
   return (
-    <div className="mt-40">
-      <div className="flex flex-col sm:px-5 sm:flex-row items-center mx-auto max-w-4xl justify-between">
-        <div className="max-w-md">
+    <div className="mt-20">
+      <div className="flex flex-col px-4 items-center sm:px-6 sm:flex-row sm:justify-between mx-auto max-w-4xl">
+        <div className="sm:max-w-md max-h-md">
           <div className="flex flex-row items-center">
             <h1 className="text-black text-3xl font-monoton">
               {"Hi, I'm Kaio Marx"}
@@ -14,14 +14,14 @@ export function Greetings() {
               <strong className="ml-2 text-3xl text-my-blue">👋</strong>
             </div>
           </div>
-          <h1 className="text-5xl my-4 text-gray-700 font-lob">
-            a Front-end Developer based in Brazil
+          <h1 className="text-5xl my-4 text-transparent bg-clip-text bg-gradient-to-r from-my-blue to-indigo-600 font-lob">
+            Front-end Developer based in Brazil
           </h1>
           <div className='flex flex-col gap-3'>
             <div className='flex flex-row gap-3'>
               <strong className='text-xl'>✍</strong>
               <span className="text-gray-700 block text-xl">
-                ~1 year web development experiences
+                ~6 months web development experiences
               </span>
             </div>
             <div className='flex flex-row gap-3'>
@@ -39,11 +39,12 @@ export function Greetings() {
           </div>
         </div>
         <div className='mt-8 sm:mt-0'>
-          <Image 
-            className="animate-wave rounded-full" 
+          <Image
+            className="animate-wave rounded-full"
+            priority
             width={320} 
             height={320} 
-            src={kaio} 
+            src="/kaio.jpeg" 
             alt="kaio's 3d picture"
           />
         </div>
