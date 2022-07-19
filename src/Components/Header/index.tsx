@@ -3,6 +3,7 @@ import Link from "next/link";
 import { List } from "phosphor-react";
 
 const navigation = [
+  {href: 'https://resume.io/r/8xO7C6HuC', title: 'Resume'},
   {href: 'https://github.com/KaioMarxDEV', title: 'Github'},
   {href: 'https://www.linkedin.com/in/kaiomarxdev/', title: 'LinkedIn'},
   {href: '#projects', title: 'Projects'},
