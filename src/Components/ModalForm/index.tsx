@@ -55,7 +55,7 @@ export function ModalForm({ modalStatus, handleModalClose }: Props) {
         () => toast.success(
           'Your email is sent! 🤝', 
           {
-            position:"top-right",
+            position:"top-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -66,7 +66,7 @@ export function ModalForm({ modalStatus, handleModalClose }: Props) {
       )
     } catch (e) {
       toast.error('Sorry, an error occurred, try again.', {
-        position:"top-right",
+        position:"top-center",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,

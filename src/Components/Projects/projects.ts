@@ -85,11 +85,15 @@ export const projectsArray = [
       },
       {
         id: v4(), 
-        name: 'React Hooks & State',
+        name: 'Hooks & State',
       },
       {
         id: v4(),
         name: 'Node/Typescript'
+      },
+      {
+        id: v4(),
+        name: 'JSON'
       }
     ]
   },

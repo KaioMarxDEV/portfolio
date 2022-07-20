@@ -10,8 +10,12 @@ const navigation = [
   {href: '#hello', title: 'Say Hello!'},
 ]
 
-export function Header() {
+const mobNavigation = navigation.filter((nav) => {
+  if (nav.href !== 'https://resume.io/r/8xO7C6HuC') return nav;
+});
 
+export function Header() {
+  console.log(mobNavigation)
   return (
     <header className="bg-[#ffffff7d] rounded-md sm:backdrop-blur-md sm:border-my-blue sm:border-b">
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -31,7 +35,7 @@ export function Header() {
               leaveTo="opacity-0"
             >
               <Menu.Items className="sm:hidden absolute top-16 left-0 flex flex-1 flex-row w-screen backdrop-blur-md bg-[#ffffff7d] rounded">
-                {navigation.map(({ href, title }) => (
+                {mobNavigation.map(({ href, title }) => (
                   <Menu.Item key={href}>
                     {({ active }) => (
                       
