@@ -76,7 +76,9 @@ export default function Work() {
                 >
                   <div className="flex flex-row items-center">
                     <h3 className="text-8xl mb-6 font-semibold">{project.name}</h3>
-                    { project.id === 1 && <Badge /> }
+                    { project.name === 'Gofinance' && <Badge /> }
+                    { project.name === 'Ecommerce' && <Badge /> }
+                    { project.name === 'Podcaster' && <Badge /> }
                   </div>
                   <span className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#16BFFD] to-[#CB3066]">
                     {project.platform}
