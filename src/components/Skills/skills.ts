@@ -5,8 +5,9 @@ export const backend = [
   {id: 4, name: 'PostgreSQL'},
   {id: 5, name: 'Typescript'},
   {id: 6, name: 'JWT'},
-  {id: 7, name: 'Cryptography'},
-  {id: 8, name: 'Patterns'},
+  {id: 7, name: 'Golang'},
+  {id: 8, name: 'Cryptography'},
+  {id: 9, name: 'Patterns'},
 ]
 
 export const devops = [
@@ -27,6 +28,6 @@ export const frontend = [
   {id: 6, name: 'Typescript'},
   {id: 7, name: 'HTML, CSS'},
   {id: 8, name: 'CMS'},
-  {id: 9, name: 'Unit Test'},
+  {id: 9, name: 'Bootstrap'},
   {id: 10, name: 'Tailwindcss'},
 ]
