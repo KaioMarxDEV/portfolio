@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import { ArrowCircleDown, ArrowUUpLeft } from "phosphor-react";
+import Badge from "../components/Badge";
 import { Skills } from "../components/Skills";
 import SlideLeft from "../components/SlideLeft";
 import Slideup from "../components/Slideup";
@@ -71,9 +72,12 @@ export default function Work() {
                   key={project.id}
                   target="_blank"
                   href={project.url}
-                  className="my-10 hover:ml-10 transition-all ease-[cubic-bezier(0.2,0.6,0.2,1)] duration-500"
+                  className="my-20 hover:ml-10 transition-all ease-[cubic-bezier(0.2,0.6,0.2,1)] duration-500"
                 >
-                  <h3 className="text-8xl mb-6 font-semibold">{project.name}</h3>
+                  <div className="flex flex-row items-center">
+                    <h3 className="text-8xl mb-6 font-semibold">{project.name}</h3>
+                    { project.id === 1 && <Badge /> }
+                  </div>
                   <span className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#16BFFD] to-[#CB3066]">
                     {project.platform}
                   </span>
