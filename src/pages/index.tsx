@@ -1,19 +1,29 @@
 import Link from "next/link";
 import Slideup from "../components/Slideup";
 
+import Head from "next/head";
 import Image from "next/image";
 import big from '../assets/big.png';
-// import dale2 from '../assets/dale2.png';
 import SizeDown from "../components/SizeDown";
+import SlideLeft from "../components/SlideLeft";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <link rel="android-chrome" sizes="192x192" href="/android-chrome-192x192.png"/>
+        <link rel="android-chrome" sizes="512x512" href="/android-chrome-512x512.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="icon" href='/favicon.ico' />
+        <link rel="manifest" href="/site.webmanifest" />   
+      </Head>
       <div className="h-full w-full ">
           <div className="h-full flex absolute items-center">
             <h1 className="font-bold fixed z-50 left-[25%] leading-tight tracking-tight text-9xl">
               <div className="relative block overflow-hidden">
-                <Slideup>
+                <SlideLeft>
                   <Link 
                     href="/about"
                     className="cursor-pointer no-underline"
@@ -30,7 +40,7 @@ export default function Home() {
                       "
                     />
                   </Link>
-                </Slideup>
+                </SlideLeft>
                 <Slideup>
                   <Link 
                     href="/work"
@@ -73,7 +83,7 @@ export default function Home() {
       </div>
       <SizeDown>
         <Image
-          className="-z-50 fixed scale-90 left-[40%] shadow-red-500 shadow-2xl rounded-full antialiased  bg-no-repeat"
+          className="-z-50 fixed scale-90 left-[40%] shadow-blue-600 shadow-2xl rounded-full antialiased  bg-no-repeat"
           alt='dale'
           src={big}
         />
