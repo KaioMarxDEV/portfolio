@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Slideup from "../components/Slideup";
 
+import Head from "next/head";
 import Image from "next/image";
 import big from '../assets/big.png';
 import SizeDown from "../components/SizeDown";
@@ -9,6 +10,9 @@ import SlideLeft from "../components/SlideLeft";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Kaio Marx Developer</title>
+      </Head>
       <div className="h-full w-full ">
           <div className="h-full flex absolute items-center">
             <h1 className="font-bold fixed z-50 left-[25%] leading-tight tracking-tight text-9xl">
