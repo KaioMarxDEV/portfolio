@@ -73,7 +73,7 @@ export default function Home() {
       </div>
       <SizeDown>
         <Image
-          className="-z-50 fixed scale-90 left-[40%] shadow-blue-600 shadow-2xl rounded-full antialiased  bg-no-repeat"
+          className="-z-50 fixed scale-90 left-[40%] shadow-red-600 shadow-2xl rounded-full antialiased  bg-no-repeat"
           alt='dale'
           src={big}
         />
