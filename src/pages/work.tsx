@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { ArrowCircleDown, ArrowUUpLeft } from "phosphor-react";
+import { ArrowCircleDown, ArrowUUpLeft, Flask, Warning } from "phosphor-react";
 import Badge from "../components/Badge";
 import { Skills } from "../components/Skills";
 import SlideLeft from "../components/SlideLeft";
@@ -77,14 +77,36 @@ export default function Work() {
                   <div className="flex flex-row items-center">
                     <h3 className="text-8xl mb-6 font-semibold">{project.name}</h3>
                     { project.name === 'Gofinance' && <Badge /> }
-                    { project.name === 'Ecommerce' && <Badge /> }
-                    { project.name === 'Podcaster' && <Badge /> }
                   </div>
                   <span className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#16BFFD] to-[#CB3066]">
                     {project.platform}
                   </span>
                 </Link>
               ))}
+              <div className="flex justify-center flex-col items-center mt-20 border-4 border-dashed border-gray-500 bg-slate-900 py-10">
+                <div className="flex gap-10">
+                  <Warning className="text-6xl  text-orange-500" />
+                  <Flask className="text-6xl animate-wave text-green-500" />
+                  <Warning className="text-6xl text-orange-500" />
+                </div>
+                <div className="flex-col flex items-center">
+                  <p className="font-semibold text-2xl">
+                    I&apos;ll be adding more projects but first testing everything, 
+                  </p>
+                  <div className="flex flex-row items-center">
+                    <p className="font-semibold text-2xl">
+                      to ensure that the projects are
+                    </p>
+                    <div className="overflow-hidden h-8 flex-col flex font-bold text-2xl text-white">
+                      <span className="text-orange-500 block animate-spin_word pl-2 h-full">Fantastic</span>
+                      <span className="text-green-500 block animate-spin_word pl-2 h-full">Interesting</span>
+                      <span className="text-red-500 block animate-spin_word pl-2 h-full">Amazing</span>
+                      <span className="text-blue-500 block animate-spin_word pl-2 h-full">Incredible</span>
+                      <span className="text-yellow-500 block animate-spin_word pl-2 h-full">Awesome</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
