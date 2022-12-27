@@ -88,7 +88,7 @@ export default function About() {
               My abundant energy fuels me in the pursuit of many interests, hobbies, areas of study and that is not a reason to not be specilized, so I can say I&apos;m specialized in Back-end with Go (golang) and Front-end with React.js. I&apos;m a fast learner, able to pick up new skills and juggle different projects and roles with relative ease and AUTONOMY.
               </p>
               <p className="text-lg mb-7">
-              I like to develop expertise in a number of areas over the course of my life and career. My personality type is ENTP.
+              I like to develop expertise in a number of areas over the course of my life and career. My personality type is INTP.
               </p>
               <p className="text-lg mb-7">
                 You can read more about my biography, experience, skills, education and much more in the PDF attached bellow:
@@ -98,19 +98,37 @@ export default function About() {
                   href="https://docs.google.com/document/d/17cOKn-OEIvWS9zxgSHkCe0ZDcfnwn9y1LQrHknd7UiE/edit?usp=sharing"
                   className="cursor-pointer no-underline"
                 >
-                  <div
-                    className="
-                    text-yellow-400 
-                      text-lg
-                      font-bold
-                      after:content-['My_resume_(Google_Docs_website)']
-                      hover:text-2xl
-                      transition-all 
-                      ease-[cubic-bezier(0.2,0.6,0.2,1)] 
-                      duration-500
-                    "
-                  />
-                </Link>
+                <div
+                  className="
+                  text-yellow-400 
+                    text-lg
+                    font-bold
+                    after:content-['My_resume_(Google_Docs_website)']
+                    hover:text-2xl
+                    transition-all 
+                    ease-[cubic-bezier(0.2,0.6,0.2,1)] 
+                    duration-500
+                  "
+                />
+              </Link>
+              <Link
+                  target="_blank"
+                  href="https://app.mindsight.com.br/devolutiva/cbe93b25-992e-4459-ba87-c82238e4e231/resultado/"
+                  className="mt-4 cursor-pointer no-underline"
+                >
+                <div
+                  className="
+                  text-yellow-400 
+                    text-lg
+                    font-bold
+                    after:content-['Personality_(Mindsight.com)']
+                    hover:text-2xl
+                    transition-all 
+                    ease-[cubic-bezier(0.2,0.6,0.2,1)] 
+                    duration-500
+                  "
+                />
+              </Link>
             </div>
           </div>
         </div>
