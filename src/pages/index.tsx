@@ -1,11 +1,11 @@
-import Link from "next/link";
-import Slideup from "../components/Slideup";
+import Link from 'next/link';
+import Slideup from '../components/Slideup';
 
-import Head from "next/head";
-import Image from "next/image";
+import Head from 'next/head';
+import Image from 'next/image';
 import big from '../assets/big.png';
-import SizeDown from "../components/SizeDown";
-import SlideLeft from "../components/SlideLeft";
+import SizeDown from '../components/SizeDown';
+import SlideLeft from '../components/SlideLeft';
 
 export default function Home() {
   return (
@@ -13,75 +13,67 @@ export default function Home() {
       <Head>
         <title>Kaio Marx Developer</title>
       </Head>
-      <div className="h-full w-full ">
-          <div className="h-full flex absolute items-center">
-            <h1 className="font-bold fixed z-50 left-[25%] leading-tight tracking-tight text-9xl">
-              <div className="relative block overflow-hidden">
-                <SlideLeft>
-                  <Link 
-                    href="/about"
-                    className="cursor-pointer no-underline"
-                  >
-                    <div
-                      className="
-                        after:content-['Hello.']
-                        hover:ml-10
+      <div className="max-h-screen w-full">
+        <div className="absolute flex h-full items-center">
+          <h1 className="fixed left-[25%] z-50 text-9xl font-bold leading-tight tracking-tight">
+            <div className="relative block overflow-hidden">
+              <SlideLeft>
+                <Link href="/about" className="cursor-pointer no-underline">
+                  <div
+                    className="
+                        text-white
+                        transition-all
+                        duration-500
+                        ease-[cubic-bezier(0.2,0.6,0.2,1)] 
+                        after:content-['Hello.'] 
+                        hover:ml-10 
                         hover:after:content-['About.']
-                        text-white 
-                        transition-all 
-                        ease-[cubic-bezier(0.2,0.6,0.2,1)] 
-                        duration-500
                       "
-                    />
-                  </Link>
-                </SlideLeft>
-                <Slideup>
-                  <Link 
-                    href="/work"
-                    className="cursor-pointer no-underline"
-                  >
-                    <div 
-                      className="
+                  />
+                </Link>
+              </SlideLeft>
+              <Slideup>
+                <Link href="/work" className="cursor-pointer no-underline">
+                  <div
+                    className="
+                        text-red-600 
+                        transition-all
+                        duration-500
+                        ease-[cubic-bezier(0.2,0.6,0.2,1)]
                         after:content-['I_am'] 
-                        hover:ml-10
+                        hover:ml-10 
                         hover:after:content-['Work']
-                        text-red-600
-                        transition-all 
-                        ease-[cubic-bezier(0.2,0.6,0.2,1)] 
+                      "
+                  />
+                </Link>
+              </Slideup>
+              <Slideup>
+                <Link href="/contact" className="cursor-pointer no-underline">
+                  <div
+                    className="
+                        text-red-600 
+                        transition-all
                         duration-500
-                      " 
-                    />
-                  </Link>
-                </Slideup>
-                <Slideup>
-                  <Link 
-                    href="/contact"
-                    className="cursor-pointer no-underline"
-                  >
-                    <div
-                      className="
+                        ease-[cubic-bezier(0.2,0.6,0.2,1)]
                         after:content-['Kaio'] 
-                        hover:ml-10
+                        hover:ml-10 
                         hover:after:content-['Contact']
-                        text-red-600
-                        transition-all 
-                        ease-[cubic-bezier(0.2,0.6,0.2,1)] 
-                        duration-500
-                      " 
-                    />
-                  </Link>
-                </Slideup>
-              </div>
-            </h1>
-          </div>
+                      "
+                  />
+                </Link>
+              </Slideup>
+            </div>
+          </h1>
+        </div>
       </div>
       <SizeDown>
         <Image
-          className="-z-50 fixed scale-90 left-[40%] shadow-red-600 shadow-2xl rounded-full antialiased  bg-no-repeat"
-          alt='dale'
+          className="fixed left-1/2 top-10 -z-50 rounded-full antialiased shadow-2xl shadow-red-600 2xl:top-56  2xl:left-[50%]"
+          width={600}
+          alt="dale"
           src={big}
         />
       </SizeDown>
     </>
-  )
+  );
 }
