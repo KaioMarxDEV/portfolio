@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -18,21 +18,32 @@ module.exports = {
           '100%': { transform: 'rotate(0.0deg)' },
         },
         spin_word: {
-          '10%': {transform: 'translateY(-112%)'},
-          '25%': {transform: 'translateY(-100%)'},
-          '35%': {transform: 'translateY(-212%)'},
-          '50%': {transform: 'translateY(-200%)'},
-          '60%': {transform: 'translateY(-312%)'},
-          '75%': {transform: 'translateY(-300%)'},
-          '85%': {transform: 'translateY(-412%)'},
-          '100%': {transform: 'translateY(-400%)'},
-        }
+          '10%': { transform: 'translateY(-112%)' },
+          '25%': { transform: 'translateY(-100%)' },
+          '35%': { transform: 'translateY(-212%)' },
+          '50%': { transform: 'translateY(-200%)' },
+          '60%': { transform: 'translateY(-312%)' },
+          '75%': { transform: 'translateY(-300%)' },
+          '85%': { transform: 'translateY(-412%)' },
+          '100%': { transform: 'translateY(-400%)' },
+        },
+        flip: {
+          '0%': {
+            transform: 'rotateX(-360deg)',
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'rotateX(360deg)',
+            opacity: '1',
+          },
+        },
       },
       animation: {
         wave: 'wave 1.5s infinite',
-        spin_word: 'spin_word 6s infinite'
+        spin_word: 'spin_word 6s infinite',
+        flip: 'flip 1.5s ease-in',
       },
     },
   },
   plugins: [],
-}
+};
