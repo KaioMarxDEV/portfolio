@@ -18,7 +18,9 @@ export default function Home() {
       const y = event.clientY / window.innerHeight;
 
       //@ts-ignore
-      page.style.transform = `translate(${x * 12}px, ${y * 12}px)`;
+      page.style.transform = `translate(${x * 12}px, ${y * 25}px) rotate(${
+        x * 6
+      }deg)`;
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -92,13 +94,14 @@ export default function Home() {
           <div
             ref={pageRef}
             className="
-            translate-x-z 
+            translate-x-z
             translate-y-z 
             fixed 
             left-1/2 
             top-10 
             -z-50 
             flex 
+            rotate-6 
             flex-col items-center  
             justify-center
             overflow-hidden
@@ -122,7 +125,7 @@ export default function Home() {
             after:bg-clip-content
           "
           >
-            <Image className="rounded-full" width={600} alt="dale" src={big} />
+            <Image className="rounded-full" width={580} alt="dale" src={big} />
           </div>
         </SizeDown>
       </div>
