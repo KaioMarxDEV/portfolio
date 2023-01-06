@@ -18,7 +18,7 @@ export default function Home() {
       const y = event.clientY / window.innerHeight;
 
       //@ts-ignore
-      page.style.transform = `translate(${x * 35}px, ${y * 35}px)`;
+      page.style.transform = `translate(${x * 12}px, ${y * 12}px)`;
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -59,7 +59,7 @@ export default function Home() {
                 <Link href="/work" className="cursor-pointer no-underline">
                   <div
                     className="
-                        text-red-600 
+                        text-red-600
                         transition-all
                         duration-500
                         ease-[cubic-bezier(0.2,0.6,0.2,1)]
@@ -74,7 +74,7 @@ export default function Home() {
                 <Link href="/contact" className="cursor-pointer no-underline">
                   <div
                     className="
-                        text-red-600 
+                        text-red-600
                         transition-all
                         duration-500
                         ease-[cubic-bezier(0.2,0.6,0.2,1)]
@@ -103,7 +103,7 @@ export default function Home() {
             justify-center
             overflow-hidden
             rounded-full
-            p-4
+            p-3
             antialiased
             shadow-xl
             shadow-red-500
