@@ -18,7 +18,7 @@ export default function Home() {
       const y = event.clientY / window.innerHeight;
 
       //@ts-ignore
-      page.style.transform = `translate(${x * 12}px, ${y * 25}px) rotate(${
+      page.style.transform = `translate(${x * 12}px, ${y * 12}px) rotate(${
         x * 6
       }deg)`;
     };
