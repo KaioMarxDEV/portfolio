@@ -18,18 +18,22 @@ export default function Home() {
           <h1 className="fixed left-[25%] z-50 text-9xl font-bold leading-tight tracking-tight">
             <div className="relative block overflow-hidden">
               <SlideLeft>
-                <Link href="/about" className="cursor-pointer no-underline">
+                <Link
+                  href="/about"
+                  className="group cursor-pointer no-underline"
+                >
                   <div
                     className="
                         text-white
                         transition-all
                         duration-500
                         ease-[cubic-bezier(0.2,0.6,0.2,1)] 
-                        after:content-['Hello.'] 
+                        after:content-['Hello.']  
                         hover:ml-10 
                         hover:after:content-['About.']
                       "
                   />
+                  <div className="delay-75 after:block after:h-0.5 after:w-[0%] after:bg-white after:transition-all after:duration-500 after:ease-in-out group-hover:after:w-full" />
                 </Link>
               </SlideLeft>
               <Slideup>
