@@ -103,7 +103,7 @@ export default function Home() {
             justify-center
             overflow-hidden
             rounded-full
-            p-2
+            p-4
             antialiased
             shadow-xl
             shadow-red-500
