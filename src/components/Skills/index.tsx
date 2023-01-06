@@ -26,7 +26,7 @@ export function Skills() {
         <h2 className="text-6xl font-semibold">Skills</h2>
       </div>
       <div className="mt-2 flex flex-col items-center">
-        <div className="z-10 my-6 flex flex-1 cursor-pointer items-center gap-2 rounded-xl bg-slate-900 p-4 backdrop-blur hover:animate-flip">
+        <div className="z-10 my-6 flex flex-1 cursor-pointer items-center gap-2 rounded-xl bg-slate-900 p-4 backdrop-blur">
           <HandPalm className="text-red-600" size={32} />
           {backendSkills.map((skill) => (
             <span key={skill.id}>{skill.name}</span>

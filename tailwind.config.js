@@ -6,7 +6,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'glow-border': 'linear-gradient(90deg, #dc2626 0%, #71C4FFFF 100%);',
+      },
       keyframes: {
+        rotate: {
+          from: {
+            transform: 'rotate(360deg)',
+          },
+          to: {
+            transform: 'rotate(0deg)',
+          },
+        },
         wave: {
           '0%': { transform: 'rotate(0.0deg)' },
           '15%': { transform: 'rotate(14.0deg)' },
@@ -27,21 +38,11 @@ module.exports = {
           '85%': { transform: 'translateY(-412%)' },
           '100%': { transform: 'translateY(-400%)' },
         },
-        flip: {
-          '0%': {
-            transform: 'rotateX(-360deg)',
-            opacity: '1',
-          },
-          '100%': {
-            transform: 'rotateX(360deg)',
-            opacity: '1',
-          },
-        },
       },
       animation: {
         wave: 'wave 1.5s infinite',
         spin_word: 'spin_word 6s infinite',
-        flip: 'flip 1.5s ease-in',
+        spin_slow: '4s rotate linear infinite',
       },
     },
   },

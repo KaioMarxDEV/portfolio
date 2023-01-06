@@ -3,11 +3,31 @@ import Slideup from '../components/Slideup';
 
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 import big from '../assets/big.png';
 import SizeDown from '../components/SizeDown';
 import SlideLeft from '../components/SlideLeft';
 
 export default function Home() {
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (event: { clientX: number; clientY: number }) => {
+      const page = pageRef.current;
+      const x = event.clientX / window.innerWidth;
+      const y = event.clientY / window.innerHeight;
+
+      //@ts-ignore
+      page.style.transform = `translate(${x * 35}px, ${y * 35}px)`;
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -33,7 +53,6 @@ export default function Home() {
                         hover:after:content-['About.']
                       "
                   />
-                  <div className="delay-75 after:block after:h-0.5 after:w-[0%] after:bg-white after:transition-all after:duration-500 after:ease-in-out group-hover:after:w-full" />
                 </Link>
               </SlideLeft>
               <Slideup>
@@ -69,15 +88,44 @@ export default function Home() {
             </div>
           </h1>
         </div>
+        <SizeDown>
+          <div
+            ref={pageRef}
+            className="
+            translate-x-z 
+            translate-y-z 
+            fixed 
+            left-1/2 
+            top-10 
+            -z-50 
+            flex 
+            flex-col items-center  
+            justify-center
+            overflow-hidden
+            rounded-full
+            p-2
+            antialiased
+            shadow-xl
+            shadow-red-500
+            blur
+            before:absolute
+            before:-z-10
+            before:h-[200%]
+            before:w-[200%]
+            before:animate-spin_slow
+            before:bg-glow-border
+            after:absolute
+            after:inset-0
+            after:-z-10
+            after:rounded-xl
+            after:bg-transparent
+            after:bg-clip-content
+          "
+          >
+            <Image className="rounded-full" width={600} alt="dale" src={big} />
+          </div>
+        </SizeDown>
       </div>
-      <SizeDown>
-        <Image
-          className="fixed left-1/2 top-10 -z-50 rounded-full antialiased shadow-2xl shadow-red-600 2xl:top-56  2xl:left-[50%]"
-          width={600}
-          alt="dale"
-          src={big}
-        />
-      </SizeDown>
     </>
   );
 }
