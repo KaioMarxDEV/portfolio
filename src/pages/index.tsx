@@ -95,22 +95,23 @@ export default function Home() {
             ref={pageRef}
             className="
             translate-x-z
-            translate-y-z 
-            fixed 
-            left-1/2 
+            translate-y-z
+            fixed
+            left-1/2
             top-10 
             -z-50 
             flex 
             rotate-6 
-            flex-col items-center  
-            justify-center
-            overflow-hidden
+            flex-col 
+            items-center 
+            justify-center 
+            overflow-hidden  
             rounded-full
             p-3
             antialiased
             shadow-xl
             shadow-red-500
-            blur
+            blur-sm
             before:absolute
             before:-z-10
             before:h-[200%]
