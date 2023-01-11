@@ -108,24 +108,6 @@ export default function Contact() {
               </Link>
               <Link
                 target="_blank"
-                href="https://twitter.com/KaioMarx"
-                className="my-4 cursor-pointer no-underline"
-              >
-                <div
-                  className="
-                    text-lg 
-                      font-bold
-                      text-green-500
-                      transition-all
-                      duration-500
-                      ease-[cubic-bezier(0.2,0.6,0.2,1)] 
-                      after:content-['Twitter'] 
-                      hover:translate-x-10
-                    "
-                />
-              </Link>
-              <Link
-                target="_blank"
                 href="https://www.linkedin.com/in/kaiomarx/"
                 className="my-4 cursor-pointer no-underline"
               >
